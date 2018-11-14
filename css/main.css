@@ -61,7 +61,6 @@ h1 {
     color: hsla(360, 100%, 100%, 1);
     text-shadow: 4px 4px 5px hsla(0, 0%, 0%, 1);
     text-align: rtl;
-
 }
 
 h2 {
@@ -101,8 +100,8 @@ header {
     width: 100%;
     padding: 4rem;
     background-color: hsla(210, 50%, 20%, 1);
-    animation: ease-out 2s 1 slideInFromLeft;
-    background-image: url(https://placeimg.com/800/224/nature);
+    animation: ease-in 3s 1 slideInFromTop;
+    background-image: url("https://placeimg.com/800/224/nature");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -110,63 +109,61 @@ header {
     transition-timing-function: ease-out;
 }
 
-.navig .mainnav {
+.navWrap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+nav {
+    width: 30%;
+}
+
+nav > ul {
     width: 100%;
     max-width: 100%;
     display: flex;
-    justify-content: space-around;
     border-radius: 5px;
 }
 
-ul.mainnav{
+ul.mainnav {
     display: flex;
     flex-flow: column;
-    align-self: flex-start;
-    padding: 1rem 0 0 2rem;
-/*    list-style-position: outside;*/
-    background-color: hsla(0, 0%, 0%, 0);
-/*    padding: 5rem;*/
+    padding: 3rem;
     border: 3px solid black;
     border-radius: 5px;
 }
 
-.mainnav > .link{
+.link {
     justify-content: center;
     margin: 1rem 0 1rem 0;
-    border: 3px solid black;
+    border: 1px solid black;
     border-radius: 5px;
-}
-
-
-ul > li {
-    width: 100%;
-    display: flex;
-/*    flex-flow: row;*/
-/*    justify-content: space-around;*/
-    /*    max-width: 40%;*/
 }
 
 .hr {
     display: flex;
     max-width: 100%;
-/*    justify-content: space-around;*/
+    /*    justify-content: space-around;*/
 }
 
-nav > ul > li{
+nav > ul > li {
+    background-color: hsla(210, 50%, 20%, 1);
     display: flex;
     width: 100%;
-    background-color: hsla(210, 50%, 20%, 1);
-/*    justify-content: center;*/
+    /*    justify-content: center;*/
     padding: 0.5rem;
     /*    max-width: 40%;*/
 }
 
+/*
 nav li {
     display: flex;
     width: 100%;
-/*    max-width: 40%;*/
+        max-width: 40%;
     list-style: none;
 }
+*/
 
 nav a,
 nav a:link,
@@ -176,6 +173,8 @@ nav a:visited {
     text-decoration: none;
     color: hsla(360, 100%, 100%, 1);
     transition: background 0.5s;
+    /*    width: 70%;*/
+    /*    max-width: 100%;*/
 }
 
 nav a:active,
@@ -194,22 +193,13 @@ main {
     overflow: auto;
     padding: 1rem;
     border: 3px solid black;
+    grid-area: main;
     /*    padding: 0 1em 1em 1em;*/
 }
 
-/*
-.col {
-    float: none;
-    display: flex;
-    flex-flow: column;
-    width: 100%;
-    text-align: justify;
-}
-*/
-
 .col.first {
     /*    float: left;*/
-/*    flex-direction: row;*/
+    /*    flex-direction: row;*/
     flex-wrap: wrap;
     width: 50%;
     max-width: 100%;
@@ -227,15 +217,15 @@ main {
     border: 3px solid black;
 }
 
+
+/*
 .navWrap{
-/*    float: none;*/
     display: flex;
     flex-flow: row;
     width: 100%;
     max-width: 100%;
-/*    overflow: auto;*/
-/*    position: absolute;*/
 }
+*/
 
 /*
 .navWrap > .navig{
@@ -243,9 +233,7 @@ main {
     width: 20%;
     max-width: 100%;
 }
-*/
 
-/*
 .navWrap > main{
     display: flex;
     width: 80%;
@@ -266,26 +254,29 @@ main {
     display: flex;
     /*    float: left;*/
     height: auto;
-    width: 90%;
+    /*    width: 90%;*/
     margin: 0 0 1rem 0;
-/*        padding: 1rem 5rem 1rem 1rem;*/
+    /*        padding: 1rem 5rem 1rem 1rem;*/
     max-width: 100%;
-    border-radius: 6px 6px 6px 6px;
+    border-radius: 5px;
     background-color: lightgray;
 }
 
 .img {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    float: left;
+    width: 50%;
     max-width: 100%;
-    
-    border: 2px solid black;
+    /*    border: 2px solid black;*/
     border-radius: 6px;
     text-align: center;
-/*    padding: 1rem 5rem 1rem 1rem;*/
+    font-size: 1rem;
+    /*    padding: 1rem 5rem 1rem 1rem;*/
     padding: 1rem;
-    margin: 1rem 5rem 1rem 1rem;
+    /*    margin: 1rem 1rem 1rem 1rem;*/
+    box-shadow: -1px 1px 1px 2px hsla(210, 50%, 20%, 1);
+    background-color: hsla(290, 3%, 80%, 1);
 }
 
 
@@ -296,45 +287,48 @@ img:hover{
 }
 */
 
-p > img{
-    box-shadow: 4px 4px 8px 4px hsla(210, 50%, 20%, 1);
-}
-
 p {
     margin: 1rem;
     /*    padding: 1rem;*/
 }
 
-.footer {
+footer.footer {
     display: flex;
     flex-direction: column;
     width: 100%;
     background-color: hsla(210, 50%, 20%, 1);
 }
 
-.footer > ul {
+footer > ul {
     display: flex;
     flex-flow: row;
-/*    background-color: hsla(210, 50%, 20%, 1);*/
     padding: 1rem;
 }
 
-.footer p{
+footer > ul > li {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    /*    max-width: 40%;*/
+}
+
+.footer p {
     text-align: center;
     text-shadow: 1px 1px 1px hsla(0, 0%, 100%, 1);
-/*    color: hsla(360, 100%, 100%, 1);*/
+    /*    color: hsla(360, 100%, 100%, 1);*/
     color: hsla(27, 100%, 58%, 1);
-    font-size: 1.618rem;   
+    font-size: 1.618rem;
 }
 
 ul a {
     text-decoration: none;
-    color: hsla(27, 100%, 58%, 1);
-/*    color: hsla(360, 100%, 100%, 1);*/
+    color: hsla(360, 100%, 100%, 1);
+    /*    color: hsla(27, 100%, 58%, 1);*/
+    /*    color: hsla(360, 100%, 100%, 1);*/
     font-size: 1rem;
 }
 
-ul a:hover{
+ul a:hover {
     color: hsla(360, 100%, 100%, 1);
     animation: tada 1s;
 }
@@ -353,8 +347,8 @@ ul a:hover{
         /*    flex-direction: column;*/
         flex-wrap: wrap;
     }
-    
-/*
+
+    /*
     .navWrap{
         display: grid;
         grid-auto-flow: row;
@@ -363,8 +357,100 @@ ul a:hover{
 */
 }
 
-@media screen and (min-width: 800px) {
+
+@media screen and (max-width: 1200px) {
+    .navWrap {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    ul.mainnav {
+        display: flex;
+        flex-flow: row;
+        padding: 0rem;
+        border: 3px solid black;
+        border-radius: 5px;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .link {
+        justify-content: center;
+        margin: 0.5rem;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+
+    nav > ul > li {
+        /*        display: flex;*/
+        /*        width: 100%;*/
+        background-color: hsla(155, 100%, 27%, 1);
+        /*    justify-content: center;*/
+        padding: 0.5rem;
+        /*    max-width: 40%;*/
+    }
+
+    h1 {
+        color: hsla(360, 100%, 100%, 1);
+        text-shadow: -2px -2px 5px hsla(37, 96%, 31%, 1);
+    }
+
+    h2 {
+        color: hsla(0, 0%, 35%, 1);
+        text-shadow: 2px -1px 2px hsla(0, 0%, 0%, 1);
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    nav > ul {
+        background-color: hsla(290, 3%, 45%, 1);
+        width: 100%;
+        max-width: 100%;
+    }
+
+    nav > ul > li {
+        margin: 0px;
+        padding: 0px;
+        background-color: hsla(290, 3%, 45%, 1);
+    }
     
+/*
+    nav > ul{
+        width: 100%;
+        max-width: 100%;
+    }
+*/
+    
+    nav > ul > li > .hr{
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+        background-color: aqua;
+        font-size: 1rem;
+    }
+
+    .link {
+        border: 0px;
+        width: 20%;
+        max-width: 20%;
+        display: flex;
+        font-size: 1rem;
+    }
+
+    .img {
+        float: none;
+        width: 90%;
+        max-width: 100%;
+    }
+
 }
 
 @media screen and (min-width: 1200px) {}
