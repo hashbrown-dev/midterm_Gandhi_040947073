@@ -130,7 +130,7 @@ ul.mainnav {
     display: flex;
     flex-flow: column;
     padding: 3rem;
-    border: 3px solid black;
+/*    border: 3px solid black;*/
     border-radius: 5px;
 }
 
@@ -192,7 +192,7 @@ main {
     width: 100%;
     overflow: auto;
     padding: 1rem;
-    border: 3px solid black;
+/*    border: 3px solid black;*/
     grid-area: main;
     /*    padding: 0 1em 1em 1em;*/
 }
@@ -205,7 +205,7 @@ main {
     max-width: 100%;
     padding: 2rem;
     text-align: justify;
-    border: 3px solid black;
+/*    border: 3px solid black;*/
 }
 
 .col.second {
@@ -214,7 +214,7 @@ main {
     max-width: 100%;
     padding: 2rem;
     text-align: justify;
-    border: 3px solid black;
+/*    border: 3px solid black;*/
 }
 
 
@@ -374,6 +374,7 @@ ul a:hover {
         flex-flow: row;
         padding: 0rem;
         border: 3px solid black;
+        border-top: 3px;
         border-radius: 5px;
     }
 
@@ -436,6 +437,12 @@ ul a:hover {
         justify-content: center;
 /*        background-color: aqua;*/
         font-size: 1.5rem;
+    }
+    
+    ul.mainnav{
+        border: 0px;
+        padding: 0.5rem;
+/*        border-top: 3px;*/
     }
 
     .link {
