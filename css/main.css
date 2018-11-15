@@ -36,7 +36,7 @@ Colour scheme
 /*Image box shaddow effect*/
 /*https://www.w3schools.com/css/css3_shadows.asp*/
 
-@import 'https://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono|Droid+Serif';
+@import 'https://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono|Droid+Serif|Raleway:400,700';
 
 * {
     padding: 0;
@@ -65,19 +65,21 @@ h1 {
 
 h2 {
     font: bold 2.618rem 'Droid Serif', 'more font stack stuff', serif;
-    text-shadow: -1px -1px 5px hsla(37, 96%, 31%, 1);
+    color: hsla(0, 0%, 35%, 1);
+    text-shadow: 2px -1px 2px hsla(0, 0%, 0%, 1);
+    /*    text-shadow: -1px -1px 5px hsla(37, 96%, 31%, 1);*/
     text-align: center;
     padding: 1rem;
 }
 
 li,
-p,
 a {
     font: bold 1.618rem 'Droid Sans', 'more font stack stuff', sans-serif;
 }
 
 p {
-    padding: 0.2em 0;
+    /*    padding: 0.2em 0;*/
+    font: 1.618rem 'Raleway', sans-serif;
 }
 
 pre,
@@ -116,7 +118,7 @@ header {
 }
 
 nav {
-    width: 30%;
+    width: 25%;
 }
 
 nav > ul {
@@ -129,8 +131,9 @@ nav > ul {
 ul.mainnav {
     display: flex;
     flex-flow: column;
-    padding: 3rem;
-/*    border: 3px solid black;*/
+    padding: 2rem;
+    margin-top: 1rem;
+    /*    border: 3px solid black;*/
     border-radius: 5px;
 }
 
@@ -138,7 +141,7 @@ ul.mainnav {
     justify-content: center;
     margin: 1rem 0 1rem 0;
     border: 1px solid black;
-    border-radius: 5px;
+    border-radius: 25px;
 }
 
 .hr {
@@ -189,10 +192,10 @@ main {
     /*    flex-flow: column;*/
     justify-content: space-between;
     /*    flex-wrap: wrap;*/
-    width: 100%;
+    width: 80%;
     overflow: auto;
     padding: 1rem;
-/*    border: 3px solid black;*/
+    /*    border: 3px solid black;*/
     grid-area: main;
     /*    padding: 0 1em 1em 1em;*/
 }
@@ -200,23 +203,27 @@ main {
 .col.first {
     /*    float: left;*/
     /*    flex-direction: row;*/
-    flex-wrap: wrap;
+    /*    flex-wrap: wrap;*/
     width: 50%;
     max-width: 100%;
-    padding: 2rem;
+    padding: 1rem;
     text-align: justify;
-/*    border: 3px solid black;*/
+    /*    border: 3px solid black;*/
 }
 
 .col.second {
-    /*    float: left;*/
     width: 50%;
     max-width: 100%;
-    padding: 2rem;
+    padding: 1rem;
     text-align: justify;
-/*    border: 3px solid black;*/
+    /*    border: 3px solid black;*/
 }
 
+section > p {
+    margin: 2rem;
+    padding-bottom: 1rem;
+    line-height: 2rem;
+}
 
 /*
 .navWrap{
@@ -239,9 +246,7 @@ main {
     width: 80%;
     max-width: 100%;
 }
-*/
 
-/*
 .col.second{
     float: left;
     width: 50%;
@@ -253,30 +258,38 @@ main {
 .col img {
     display: flex;
     /*    float: left;*/
-    height: auto;
+    /*    height: auto;*/
     /*    width: 90%;*/
     margin: 0 0 1rem 0;
     /*        padding: 1rem 5rem 1rem 1rem;*/
     max-width: 100%;
     border-radius: 5px;
-    background-color: lightgray;
+    /*    background-color: lightgray;*/
 }
+
+/*
+p.img{
+    margin: 2rem;
+}
+*/
 
 .img {
     display: flex;
     flex-direction: column;
     float: left;
     width: 50%;
+    height: auto;
     max-width: 100%;
     /*    border: 2px solid black;*/
-    border-radius: 6px;
+    border-radius: 5px;
     text-align: center;
     font-size: 1rem;
     /*    padding: 1rem 5rem 1rem 1rem;*/
-    padding: 1rem;
-    /*    margin: 1rem 1rem 1rem 1rem;*/
-    box-shadow: -1px 1px 1px 2px hsla(210, 50%, 20%, 1);
-    background-color: hsla(290, 3%, 80%, 1);
+    padding: 0.5rem;
+    /*    margin: 2rem;*/
+    /*        margin: 1rem 1rem 1rem 1rem;*/
+    box-shadow: -1px 1px 3px 2px hsla(210, 50%, 20%, 1);
+    background-color: hsla(290, 3%, 85%, 0.9);
 }
 
 
@@ -287,10 +300,6 @@ img:hover{
 }
 */
 
-p {
-    margin: 1rem;
-    /*    padding: 1rem;*/
-}
 
 footer.footer {
     display: flex;
@@ -314,6 +323,7 @@ footer > ul > li {
 
 .footer p {
     text-align: center;
+    padding: 0.5rem;
     text-shadow: 1px 1px 1px hsla(0, 0%, 100%, 1);
     /*    color: hsla(360, 100%, 100%, 1);*/
     color: hsla(27, 100%, 58%, 1);
@@ -333,29 +343,6 @@ ul a:hover {
     animation: tada 1s;
 }
 
-
-
-@media screen and (max-width:600px) {
-
-    .col.first,
-    .col.second,
-    main {
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        flex-flow: column;
-        /*    flex-direction: column;*/
-        flex-wrap: wrap;
-    }
-
-    /*
-    .navWrap{
-        display: grid;
-        grid-auto-flow: row;
-        grid-auto-columns: 50% 50%;
-    }
-*/
-}
 
 
 @media screen and (max-width: 1200px) {
@@ -404,8 +391,9 @@ ul a:hover {
     }
 
     h2 {
-        color: hsla(0, 0%, 35%, 1);
-        text-shadow: 2px -1px 2px hsla(0, 0%, 0%, 1);
+        /*        color: hsla(0, 0%, 35%, 1);*/
+        text-shadow: -1px -1px 5px hsla(37, 96%, 31%, 1);
+        /*        text-shadow: 2px -1px 2px hsla(0, 0%, 0%, 1);*/
     }
 }
 
@@ -418,100 +406,153 @@ ul a:hover {
     }
 
     nav > ul > li {
-/*        margin: 0px;*/
-/*        padding: 0px;*/
+        /*        margin: 0px;*/
+        /*        padding: 0px;*/
         background-color: hsla(290, 3%, 45%, 1);
     }
-    
-    h1{
+
+    h1 {
         font-size: 2.618rem;
     }
-    
-    h2{
-        font-size: 2rem;
-    }
-    
-    nav > ul > li > .hr{
+
+    nav > ul > li > .hr {
         width: 100%;
         max-width: 100%;
         justify-content: center;
-/*        background-color: aqua;*/
+        /*        background-color: aqua;*/
         font-size: 1.5rem;
     }
-    
-    ul.mainnav{
+
+    ul.mainnav {
         border: 0px;
         padding: 0.5rem;
-/*        border-top: 3px;*/
+        /*        border-top: 3px;*/
+    }
+
+    h2 {
+        /*        padding: 0.5rem;*/
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        color: hsla(213, 46%, 46%, 0.9);
+        text-shadow: 1px -1px 1px hsla(0, 0%, 0%, 1);
+        /*        border: 1px double black;*/
+        /*        border-bottom-style: hidden;*/
+        /*        border-radius: 5px;*/
+        /*        box-shadow: 2px -1px 4px hsla(0, 0%, 0%, 1);*/
     }
 
     .link {
         border: 0px;
         width: 20%;
         max-width: 100%;
-/*        display: flex;*/
-/*        font-size: 1rem;*/
+        /*        display: flex;*/
+        /*        font-size: 1rem;*/
         padding: 0rem;
         margin: 0rem;
     }
 
     .img {
         float: none;
-        width: 90%;
+        width: 80%;
         max-width: 100%;
     }
 
 }
 
+
 @media screen and (max-width: 600px) {
-    
-    h1{
+
+    .col.first,
+    .col.second,
+    main {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-flow: column;
+        /*    flex-direction: column;*/
+        flex-wrap: wrap;
+    }
+
+    /*
+    .navWrap{
+        display: grid;
+        grid-auto-flow: row;
+        grid-auto-columns: 50% 50%;
+    }
+*/
+
+    h1 {
         font-size: 1.618rem;
-/*        color: hsla(360, 100%, 100%, 1);*/
+        /*        color: hsla(360, 100%, 100%, 1);*/
         text-shadow: 2px -2px 1px hsla(0, 0%, 0%, 1);
     }
-    
+
+    h2 {
+        padding: 0.5rem;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        color: hsla(213, 46%, 46%, 0.9);
+        border: 1px double black;
+        border-bottom-style: hidden;
+        border-radius: 5px;
+        box-shadow: 2px -1px 4px hsla(0, 0%, 0%, 1);
+    }
+
     ul.mainnav {
         display: flex;
         flex-flow: column;
         align-items: center;
     }
-    
+
     nav > ul {
         border: 2px solid black;
         background-color: hsla(63, 100%, 25%, 0.65);
     }
-    
+
     .link {
         width: 60%;
         border: 2px solid black;
         border-radius: 1rem;
         margin: 0.5rem;
-/*        background-color: hsla(63, 100%, 25%, 0.85);*/
+        /*        background-color: hsla(63, 100%, 25%, 0.85);*/
     }
-    
-    main{
+
+    main {
         padding: 0rem;
     }
-    
-    section > p{
-        font-size: 1rem;
+
+    section > p {
+        font: bold 1rem 'Raleway', sans-serif;
+/*        font-size: 1rem;*/
         padding: 1rem;
         margin: 0rem;
+        line-height: 1.5rem;
     }
     
-    footer > p{
+    .img {
+        float: none;
+        width: 90%;
+        max-width: 100%;
+    }
+
+    p.img {
+        align-content: center;
+        margin: 1.5rem;
+    }
+
+    footer > p {
         margin: 0.5rem;
         font-size: 1.618rem;
     }
-    
+
     footer > ul {
-    display: flex;
-    flex-flow: column;
-    padding: 0.5rem;
+        display: flex;
+        flex-flow: column;
+        padding: 0.5rem;
     }
-    
-    footer > ul > li{
+
+    footer > ul > li {
         padding: 0.25rem;
     }
 }
